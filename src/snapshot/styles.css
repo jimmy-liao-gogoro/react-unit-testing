@@ -1,0 +1,37 @@
+.container {
+  display: inline-flex;
+}
+
+.step {
+  display: inline-block;
+  position: relative;
+  width: 5em;
+}
+
+.circle {
+  display: inline-flex;
+  position: relative;
+  z-index: 1;
+  width: 2rem;
+  height: 2rem;
+  padding-left: 9.5px;
+  border: solid 2px #f1f3f3;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #323237;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.circle-active {
+  background-color: #f1f3f3;
+}
+
+.line {
+  position: absolute;
+  top: 16px;
+  width: 5rem;
+  height: 2px;
+  border: solid 2px #f1f3f3;
+  background-color: #f1f3f3;
+}
