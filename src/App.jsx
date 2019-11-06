@@ -1,8 +1,8 @@
 import React from 'react';
-import JobSteps from './snapshot/JobSteps';
+import GetServerMessage from './testing-library/GetServerMessage';
 
 function App() {
-  return <div><JobSteps step={1} total={3} /></div>;
+  return <div><GetServerMessage /></div>;
 }
 
 export default App;
