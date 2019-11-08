@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Button } from '@material-ui/core';
 import { getServerMessage } from './api';
+
 
 const GetServerMessage = () => {
   const [serverMessage, setServerMessage] = useState(null);
@@ -13,9 +15,9 @@ const GetServerMessage = () => {
 
   return (
     <div>
-      <button type="button" onClick={handleMessageClick}>
+      <Button variant="contained" color="primary" onClick={handleMessageClick}>
         Get Server Message
-      </button>
+      </Button>
       <div style={{ marginTop: '1rem' }}>
         <p>
           Server Message:
