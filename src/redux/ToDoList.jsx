@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  Paper, Button, TextField, Grid, Table, TableHead, TableBody, TableRow, TableCell,
+  Box, Button, TextField, Grid, Table, TableHead, TableBody, TableRow, TableCell,
 } from '@material-ui/core';
 
 import { addTodo } from './actions';
@@ -22,41 +22,45 @@ export default () => {
   };
 
   return (
-    <Paper>
+    <Grid container>
       <Grid
         container
         justify="flex-start"
         alignItems="center"
       >
-        <TextField
-          id="standard-basic"
-          label="Standard"
-          margin="normal"
-          value={pending}
-          onChange={handlePendingChange}
-        />
+        <Box mr={3}>
+          <TextField
+            id="standard-basic"
+            label="Item"
+            margin="normal"
+            value={pending}
+            onChange={handlePendingChange}
+          />
+        </Box>
         <Button variant="contained" color="primary" onClick={handleAddClick}>
           Add To-Do Item
         </Button>
       </Grid>
-      <Table aria-label="To-Do Table">
-        <TableHead>
-          <TableRow>
-            <TableCell align="right">ID</TableCell>
-            <TableCell align="right">Completed</TableCell>
-            <TableCell align="right">Item</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {todo.map((item) => (
-            <TableRow key={item.id}>
-              <TableCell align="right">{item.id}</TableCell>
-              <TableCell align="right">{item.completed ? 'Done' : 'Not Yet'}</TableCell>
-              <TableCell align="right">{item.text}</TableCell>
+      <Grid item sm={6}>
+        <Table aria-label="To-Do Table">
+          <TableHead>
+            <TableRow>
+              <TableCell>ID</TableCell>
+              <TableCell>Completed</TableCell>
+              <TableCell>Item</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Paper>
+          </TableHead>
+          <TableBody>
+            {todo.map((item) => (
+              <TableRow key={item.id}>
+                <TableCell>{item.id}</TableCell>
+                <TableCell>{item.completed ? 'Done' : 'Not Yet'}</TableCell>
+                <TableCell>{item.text}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Grid>
+    </Grid>
   );
 };
