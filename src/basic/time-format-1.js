@@ -8,6 +8,7 @@ function toProperUnit(seconds) {
       unit: 'seconds',
     };
   }
+  return null;
 }
 
 export default {

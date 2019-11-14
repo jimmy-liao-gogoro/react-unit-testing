@@ -15,6 +15,7 @@ export function toProperUnit(seconds) {
       unit: 'minutes',
     };
   }
+  return null;
 }
 
 export default {

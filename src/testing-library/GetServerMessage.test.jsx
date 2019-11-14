@@ -26,6 +26,8 @@ describe('<GetServerMessage />', () => {
 
     fireEvent.click(button);
 
-    await waitForElement(() => getByText('Server Message: hello testing'));
+    const message = await waitForElement(() => getByText('Server Message: hello testing'));
+
+    expect(message).toBeInTheDocument();
   });
 });
