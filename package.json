@@ -19,6 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:e2e": "cypress open",
+    "test:e2e-cli": "cypress run",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,10 +41,12 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.3",
     "@testing-library/react": "^9.3.2",
+    "cypress": "^3.6.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-cypress": "^2.7.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
