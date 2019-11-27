@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
 import { getServerMessage } from './api';
 
-
 const GetServerMessage = () => {
   const [serverMessage, setServerMessage] = useState(null);
 
