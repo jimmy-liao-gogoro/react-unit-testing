@@ -19,13 +19,13 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `yarn test:e2e`
 
-Runs Cypress tests to completion. By default will run all tests headlessly in the `Electron` browser.<br />
-See the section about [running tests](https://docs.cypress.io/guides/guides/command-line.html#cypress-run) for more information.
+Opens the Cypress Test Runner in interactive mode.<br />
+See the section about [running tests](https://docs.cypress.io/guides/guides/command-line.html#cypress-open) for more information.
 
 ### `yarn test:e2e-cli`
 
-Opens the Cypress Test Runner in interactive mode.<br />
-See the section about [running tests](https://docs.cypress.io/guides/guides/command-line.html#cypress-open) for more information.
+Runs Cypress tests to completion. By default will run all tests headlessly in the `Electron` browser.<br />
+See the section about [running tests](https://docs.cypress.io/guides/guides/command-line.html#cypress-run) for more information.
 
 ### `yarn build`
 
