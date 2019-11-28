@@ -1,5 +1,5 @@
 // time-format.test.js
-import { toProperUnit } from './time-format';
+import { toProperUnit } from './time-format-1';
 
 describe('time-format', () => {
   describe('toProperUnit()', () => {

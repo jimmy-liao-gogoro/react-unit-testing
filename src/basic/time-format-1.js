@@ -1,7 +1,7 @@
 // time-format.js
 const MINUTE = 60;
 
-function toProperUnit(seconds) {
+export function toProperUnit(seconds) {
   if (seconds < MINUTE) {
     return {
       time: seconds,
