@@ -6,8 +6,8 @@ import {
 
 import { addTodo } from './actions';
 
-export default () => {
-  const todo = useSelector(((state) => state));
+const ToDoList = () => {
+  const todo = useSelector(((state) => state.todo));
   const dispatch = useDispatch();
   const addTodoAction = (text) => dispatch(addTodo(text));
 
@@ -64,3 +64,5 @@ export default () => {
     </Grid>
   );
 };
+
+export default ToDoList;

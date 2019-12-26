@@ -5,7 +5,7 @@ import {
 import {
   createMuiTheme, ThemeProvider, Grid,
 } from '@material-ui/core';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
 import JobSteps from './snapshot/JobSteps';
@@ -13,9 +13,13 @@ import GetServerMessage from './testing-library/GetServerMessage';
 import ToDoList from './redux/ToDoList';
 import reducers from './redux/reducers';
 
-const store = createStore(reducers,
+const store = createStore(
+  combineReducers({
+    todo: reducers,
+  }),
   // eslint-disable-next-line no-underscore-dangle
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 const theme = createMuiTheme({
   palette: {

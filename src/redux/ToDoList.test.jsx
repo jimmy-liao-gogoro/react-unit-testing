@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
 import ToDoList from './ToDoList';
 import reducers from './reducers';
 
-const store = createStore(reducers);
+const store = createStore(combineReducers({ todo: reducers }));
 const renderComponent = () => render(
   <Provider store={store}>
     <ToDoList />
